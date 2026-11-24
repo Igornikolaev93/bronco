@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BB-Rental Agency</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'FiraSans', sans-serif;
+      background: #ffffff;
+    }
+
+    .bb-rental {
+      display: flex;
+      flex-direction: column;
+      max-width: 1920px;
+      margin: 0 auto;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    /* Header */
+    .bb-rental__header-rectangle {
+      background: #161616;
+      padding: 12px 266px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .bb-rental__frame-4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .bb-rental__frame-3 {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+    }
+
+    .bb-rental__logo4 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bb-rental__logo4 img {
+      height: 40px;
+    }
+
+    .bb-rental__find-your-best-car-at-a-best-price {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__frame-2 {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .bb-rental__cars,
+    .bb-rental__about,
+    .bb-rental__company2 {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 130%;
+      cursor: pointer;
+    }
+
+    .bb-rental__frame-1 {
+      border: 1px solid #ffffff;
+      border-radius: 18px;
+      padding: 15px 20px;
+    }
+
+    .bb-rental__sign-up {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    /* Main Hero Section */
+    .bb-rental__main-section {
+      display: flex;
+      flex-wrap: wrap;
+      background: #161616;
+      padding: 90px 260px 0;
+      min-height: 990px;
+      position: relative;
+    }
+
+    .bb-rental__main-bg {
+       background-image: url(./image/image\ 2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.3;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bb-rental__main-strokes {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.5;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bb-rental__main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      flex: 1;
+      z-index: 1;
+      padding: 20px 0;
+      position: relative;
+    }
+
+    .bb-rental__frame-10 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .bb-rental__bb-rental-x-ford {
+      color: #ffffff;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 130%;
+    }
+
+    .bb-rental__now-you-can-rent-a-new-ford-bronco-2023 {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .bb-rental__button {
+      background: #2b74b9;
+      border-radius: 85px;
+      padding: 20px 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0px 0px 0px 0px rgba(43, 116, 185, 0.1),
+        2px 2px 6px 0px rgba(43, 116, 185, 0.1),
+        8px 6px 10px 0px rgba(43, 116, 185, 0.09);
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    .bb-rental__rent-now3 {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .bb-rental__car-image-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      position: relative;
+    }
+
+    .bb-rental__blue-car {
+      max-width: 100%;
+      height: auto;
+      transform: rotate(-3.05deg);
+    }
+
+    .bb-rental__ellipse-7 {
+      display: none;
+    }
+
+    /* Characteristics */
+    .bb-rental__characteristics-wrapper {
+      background: #161616;
+      padding: 0 260px 30px;
+    }
+
+    .bb-rental__rectangle-characteristics {
+      background: #ffffff;
+      border-radius: 85px;
+      padding: 25px 194px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 200px;
+    }
+
+    .bb-rental__frame-27,
+    .bb-rental__frame-28,
+    .bb-rental__frame-29,
+    .bb-rental__frame-31 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bb-rental__seating-for,
+    .bb-rental___5,
+    .bb-rental__standard,
+    .bb-rental___4-x-4,
+    .bb-rental__daily,
+    .bb-rental___550,
+    .bb-rental__cargo-space,
+    .bb-rental___65-2,
+    .bb-rental__cu-ft {
+      color: #161616;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__frame-30 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* App Adapter */
+    .bb-rental__adapter {
+      background: #161616;
+    }
+
+    .bb-rental__rectangle-13 {
+      background: #161616;
+      padding: 40px 260px;
+    }
+
+    .bb-rental__frame-12 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 124px;
+    }
+
+    .bb-rental__download-an-app-now-and-the-various-benefits-you-will-get-immediately {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+      max-width: 865px;
+      text-align: center;
+    }
+
+    .bb-rental__frame-11 {
+      background: #2b74b9;
+      border-radius: 85px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0px 0px 0px 0px rgba(43, 116, 185, 0.1),
+        2px 2px 6px 0px rgba(43, 116, 185, 0.1),
+        8px 6px 10px 0px rgba(43, 116, 185, 0.09);
+      cursor: pointer;
+    }
+
+    .bb-rental__download {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .bb-rental__material-symbols-download {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* Second Page - Ford Bronco */
+    .bb-rental__second-page {
+      background: #161616;
+      padding: 60px 260px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+    }
+
+    .bb-rental__second-page-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.3;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bb-rental__second-page-fizzy {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.5;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bb-rental__second-page-visual {
+      flex: 1;
+      min-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bb-rental__white-car {
+      max-width: 100%;
+      height: auto;
+      transform: rotate(3deg);
+    }
+
+    .bb-rental__ellipse-under-the-yellow-car {
+      display: none;
+    }
+
+    .bb-rental__frame-9 {
+      flex: 1;
+      min-width: 400px;
+      background: #212121;
+      border-radius: 85px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bb-rental__frame-7 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      max-width: 520px;
+    }
+
+    .bb-rental__frame-6 {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .bb-rental__ford-bronco-2023 {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .bb-rental__deluxe {
+      color: #ffe500;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-tristique-aenean-magna-auctor-commodo-sed-nunc-tortor-at-urna-vel-arcu-porta-ultrices-est-mattis-nullam-ullamcorper-et-velit-egestas-tincidunt-placerat-sit-vitae-at-amet-in-vulputate-leo-enim-sed-dolor-id-parturient-amet-turpis-sagittis-nibh-natoque-leo-et-tincidunt-lectus-vitae-suspendisse-lorem-sed-mauris-id-semper-lectus-fringilla-vitae-suspendisse-nulla-convallis-mi-cras-cursus-cursus-turpis-ullamcorper-iaculis-sodales-vel-feugiat-risus-faucibus-condimentum-dolor-hendrerit-sed-pretium-etiam-lorem-ut-aliquet-amet-malesuada-praesent-aliquet-eros-turpis-in-et-tellus-amet-vulputate-viverra-massa-id-nec-turpis-pulvinar-dictum-ante-tortor-nisi-feugiat-lorem-a-vel-tempus-in-ut-quam-erat-nunc-ultricies-at-nullam-nam-morbi-dui-orci-id-elementum-aliquet-sit-a-consequat-aenean-malesuada-blandit-varius-nibh-varius-tincidunt-risus-pharetra-facilisi-scelerisque-tincidunt-erat-blandit-lorem-gravida-ut-aliquet-faucibus-dignissim-urna-senectus-auctor-scelerisque-lacinia-nibh-sodales-quam-sit-est-mattis-lectus-mi-viverra-et-tellus-maecenas-pretium-dictum-sed-sed-fringilla-placerat-non-cursus-adipiscing-diam-tincidunt-rhoncus-vel-nibh-urna-elit {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      text-align: center;
+      max-width: 509px;
+    }
+
+    .bb-rental__frame-8 {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .bb-rental__rent-now {
+      background: #2b74b9;
+      border-radius: 85px;
+      padding: 30px 35px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0px 0px 0px 0px rgba(43, 116, 185, 0.1),
+        2px 2px 6px 0px rgba(43, 116, 185, 0.1),
+        8px 6px 10px 0px rgba(43, 116, 185, 0.09);
+      cursor: pointer;
+    }
+
+    .bb-rental__rent-now2 {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 800;
+    }
+
+    .bb-rental___550-per-day {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    /* Footer */
+    .bb-rental__footer {
+      background: #161616;
+      padding: 40px 260px;
+      position: relative;
+    }
+
+    .bb-rental__footer-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.3;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .bb-rental__group-8 {
+      display: flex;
+      flex-direction: column;
+      gap: 170px;
+      max-width: 1152px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bb-rental__frame-26 {
+      display: flex;
+      flex-direction: column;
+      gap: 170px;
+    }
+
+    .bb-rental__frame-25 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 90px;
+      justify-content: space-between;
+    }
+
+    .bb-rental__frame-24 {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bb-rental__frame-13 {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+    }
+
+    .bb-rental__logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bb-rental__logo img {
+      height: 40px;
+    }
+
+    .bb-rental__logo2 {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__logo3 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+    }
+
+    .bb-rental__frame-23 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      flex: 1;
+    }
+
+    .bb-rental__frame-15,
+    .bb-rental__frame-17,
+    .bb-rental__frame-19 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 163px;
+    }
+
+    .bb-rental__company,
+    .bb-rental__features,
+    .bb-rental__contact-us {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__frame-14,
+    .bb-rental__frame-16,
+    .bb-rental__frame-18 {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bb-rental__about-us,
+    .bb-rental__careers,
+    .bb-rental__support,
+    .bb-rental__terms-and-conditions,
+    .bb-rental__vehicle-tracker,
+    .bb-rental__i-os-android-apps,
+    .bb-rental__all-cars,
+    .bb-rental__locations,
+    .bb-rental__info-bb-rental-com,
+    .bb-rental___302-555-0107,
+    .bb-rental___2972-westheimer-rd-santa-ana-illinois-85486 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      opacity: 0.6;
+    }
+
+    .bb-rental__frame-22 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 266px;
+    }
+
+    .bb-rental__frame-20 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bb-rental__get-deals-and-discounts {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+
+    .bb-rental__subscribe-to-our-newsletter {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      opacity: 0.6;
+    }
+
+    .bb-rental__frame-21 {
+      background: #212121;
+      border-radius: 85px;
+      padding: 20px 220px 20px 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bb-rental__email {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      opacity: 0.6;
+    }
+
+    .bb-rental__bb-rental-copyright-team-inc {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 130%;
+      opacity: 0.4;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .bb-rental__header-rectangle {
+        padding: 12px 40px;
+      }
+      .bb-rental__main-section {
+        padding: 60px 40px 0;
+      }
+      .bb-rental__characteristics-wrapper {
+        padding: 0 40px 30px;
+      }
+      .bb-rental__rectangle-characteristics {
+        padding: 25px 40px;
+        gap: 40px;
+      }
+      .bb-rental__rectangle-13 {
+        padding: 40px;
+      }
+      .bb-rental__second-page {
+        padding: 40px;
+      }
+      .bb-rental__footer {
+        padding: 40px;
+      }
+      .bb-rental__frame-25 {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .bb-rental__frame-23 {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .bb-rental__frame-4 {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .bb-rental__frame-3 {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .bb-rental__frame-2 {
+        justify-content: center;
+      }
+      .bb-rental__main-section {
+        padding: 40px 20px 0;
+        flex-direction: column;
+      }
+      .bb-rental__second-page {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .bb-rental__second-page-visual {
+        min-width: auto;
+      }
+      .bb-rental__frame-9 {
+        min-width: auto;
+        padding: 20px;
+      }
+      .bb-rental__rectangle-characteristics {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+      }
+      .bb-rental__frame-12 {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .bb-rental__frame-21 {
+        padding: 20px 40px 20px 25px;
+      }
+      .bb-rental__bb-rental-x-ford {
+        font-size: 32px;
+      }
+      .bb-rental__now-you-can-rent-a-new-ford-bronco-2023 {
+        font-size: 24px;
+      }
+      .bb-rental__download-an-app-now-and-the-various-benefits-you-will-get-immediately {
+        font-size: 24px;
+      }
+      .bb-rental__ford-bronco-2023 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bb-rental">
+    <!-- Header -->
+    <header class="bb-rental__header-rectangle">
+      <div class="bb-rental__frame-4">
+        <div class="bb-rental__frame-3">
+          <div class="bb-rental__logo4">
+            <svg width="80" height="73" viewBox="0 0 80 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 3C11.2199 3 19.1068 3.80504 25.8037 6.31738C32.3336 8.76707 38.9998 13.3901 39 21.6309C39 26.1215 37.2643 32.6043 32.1816 37.9873C30.3126 39.9667 28.0239 41.7585 25.2646 43.2422C26.4616 43.6213 27.6174 44.0853 28.7158 44.6582C31.9737 46.3576 34.6165 48.9423 36.3984 52.7148C38.1463 56.4154 39 61.1151 39 67V70H3V3H6Z" stroke="white" stroke-width="6" />
+            <path d="M44 3C49.2199 3 57.1068 3.80504 63.8037 6.31738C70.3336 8.76707 76.9998 13.3901 77 21.6309C77 26.1215 75.2643 32.6043 70.1816 37.9873C68.3126 39.9667 66.0239 41.7585 63.2646 43.2422C64.4616 43.6213 65.6174 44.0853 66.7158 44.6582C69.9737 46.3576 72.6165 48.9423 74.3984 52.7148C76.1463 56.4154 77 61.1151 77 67V70H41V3H44Z" stroke="white" stroke-width="6" />
+          </svg>
+          </div>
+          <div class="bb-rental__find-your-best-car-at-a-best-price">
+            Find your best car at a Best price
+          </div>
+        </div>
+        <nav class="bb-rental__frame-2">
+          <span class="bb-rental__cars">Cars</span>
+          <span class="bb-rental__about">About</span>
+          <span class="bb-rental__company2">Company</span>
+          <div class="bb-rental__frame-1">
+            <span class="bb-rental__sign-up">Sign Up</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Page -->
+    <section class="bb-rental__main-section">
+      <img class="bb-rental__main-bg" src="image-10.png" alt="" aria-hidden="true" />
+      <img class="bb-rental__main-strokes" src="strokes-bubbles0.svg" alt="" aria-hidden="true" />
+      
+      <div class="bb-rental__main-content">
+        <div class="bb-rental__frame-10">
+          <h1 class="bb-rental__bb-rental-x-ford">BB-Rental x Ford</h1>
+          <p class="bb-rental__now-you-can-rent-a-new-ford-bronco-2023">
+            Now you can rent a new Ford Bronco 2023
+          </p>
+        </div>
+        <div class="bb-rental__button">
+          <span class="bb-rental__rent-now3">Rent now</span>
+        </div>
+      </div>
+      <div class="bb-rental__car-image-wrapper">
+        <img class="bb-rental__blue-car" src="blue-car0.png" alt="Blue Ford Bronco" />
+      </div>
+    </section>
+
+    <!-- Characteristics -->
+    <div class="bb-rental__characteristics-wrapper">
+      <div class="bb-rental__rectangle-characteristics">
+        <div class="bb-rental__frame-27">
+          <span class="bb-rental__seating-for">Seating for</span>
+          <span class="bb-rental___5">5</span>
+        </div>
+        <div class="bb-rental__frame-28">
+          <span class="bb-rental__standard">Standard</span>
+          <span class="bb-rental___4-x-4">4x4</span>
+        </div>
+        <div class="bb-rental__frame-29">
+          <span class="bb-rental__daily">Daily</span>
+          <span class="bb-rental___550">550$</span>
+        </div>
+        <div class="bb-rental__frame-31">
+          <span class="bb-rental__cargo-space">Cargo Space</span>
+          <div class="bb-rental__frame-30">
+            <span class="bb-rental___65-2">65.2</span>
+            <span class="bb-rental__cu-ft">cu. ft.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App Adapter -->
+    <div class="bb-rental__adapter">
+      <div class="bb-rental__rectangle-13">
+        <div class="bb-rental__frame-12">
+          <p class="bb-rental__download-an-app-now-and-the-various-benefits-you-will-get-immediately">
+            Download an app now and the various benefits you will get immediately
+          </p>
+          <div class="bb-rental__frame-11">
+            <span class="bb-rental__download">Download</span>
+            <img class="bb-rental__material-symbols-download" src="material-symbols-download0.svg" alt="Download" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Page - Ford Bronco Details -->
+    <section class="bb-rental__second-page">
+      <img class="bb-rental__second-page-bg" src="image-20.png" alt="" aria-hidden="true" />
+      <img class="bb-rental__second-page-fizzy" src="fizzy-group0.svg" alt="" aria-hidden="true" />
+      
+      <div class="bb-rental__second-page-visual">
+        <img class="bb-rental__white-car" src="white-car0.png" alt="White Ford Bronco" />
+      </div>
+      <div class="bb-rental__frame-9">
+        <div class="bb-rental__frame-7">
+          <div class="bb-rental__frame-6">
+            <h2 class="bb-rental__ford-bronco-2023">Ford Bronco 2023</h2>
+            <span class="bb-rental__deluxe">Deluxe</span>
+          </div>
+          <p class="bb-rental__lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-tristique-aenean-magna-auctor-commodo-sed-nunc-tortor-at-urna-vel-arcu-porta-ultrices-est-mattis-nullam-ullamcorper-et-velit-egestas-tincidunt-placerat-sit-vitae-at-amet-in-vulputate-leo-enim-sed-dolor-id-parturient-amet-turpis-sagittis-nibh-natoque-leo-et-tincidunt-lectus-vitae-suspendisse-lorem-sed-mauris-id-semper-lectus-fringilla-vitae-suspendisse-nulla-convallis-mi-cras-cursus-cursus-turpis-ullamcorper-iaculis-sodales-vel-feugiat-risus-faucibus-condimentum-dolor-hendrerit-sed-pretium-etiam-lorem-ut-aliquet-amet-malesuada-praesent-aliquet-eros-turpis-in-et-tellus-amet-vulputate-viverra-massa-id-nec-turpis-pulvinar-dictum-ante-tortor-nisi-feugiat-lorem-a-vel-tempus-in-ut-quam-erat-nunc-ultricies-at-nullam-nam-morbi-dui-orci-id-elementum-aliquet-sit-a-consequat-aenean-malesuada-blandit-varius-nibh-varius-tincidunt-risus-pharetra-facilisi-scelerisque-tincidunt-erat-blandit-lorem-gravida-ut-aliquet-faucibus-dignissim-urna-senectus-auctor-scelerisque-lacinia-nibh-sodales-quam-sit-est-mattis-lectus-mi-viverra-et-tellus-maecenas-pretium-dictum-sed-sed-fringilla-placerat-non-cursus-adipiscing-diam-tincidunt-rhoncus-vel-nibh-urna-elit">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique
+            aenean magna auctor commodo sed. Nunc tortor, at urna vel arcu porta
+            ultrices est mattis. Nullam ullamcorper et velit egestas tincidunt
+            placerat sit vitae. At amet in vulputate leo enim sed dolor id.
+            Parturient amet, turpis sagittis nibh. Natoque leo et tincidunt lectus
+            vitae, suspendisse lorem. Sed mauris, id semper lectus fringilla vitae
+            suspendisse. Nulla convallis mi, cras cursus cursus turpis ullamcorper.
+            Iaculis sodales vel feugiat risus faucibus condimentum dolor. Hendrerit
+            sed pretium etiam lorem ut aliquet amet malesuada. Praesent aliquet eros
+            turpis in et tellus amet vulputate. Viverra massa id nec turpis pulvinar
+            dictum. Ante tortor, nisi, feugiat lorem a, vel. Tempus in ut quam erat
+            nunc ultricies at nullam.
+            <br />
+            Nam morbi dui, orci id elementum aliquet sit a. Consequat aenean
+            malesuada blandit varius nibh varius tincidunt. Risus pharetra facilisi
+            scelerisque tincidunt erat blandit lorem gravida ut. Aliquet faucibus
+            dignissim urna, senectus auctor scelerisque lacinia nibh sodales. Quam
+            sit est mattis lectus mi viverra. Et, tellus maecenas pretium, dictum
+            sed sed fringilla placerat non. Cursus adipiscing diam tincidunt rhoncus
+            vel nibh urna elit.
+          </p>
+        </div>
+        <div class="bb-rental__frame-8">
+          <div class="bb-rental__rent-now">
+            <span class="bb-rental__rent-now2">Rent now</span>
+          </div>
+          <span class="bb-rental___550-per-day">550$ per day</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bb-rental__footer">
+      <img class="bb-rental__footer-bg" src="footer-rectangle0.svg" alt="" aria-hidden="true" />
+      
+      <div class="bb-rental__group-8">
+        <div class="bb-rental__frame-26">
+          <div class="bb-rental__frame-25">
+            <div class="bb-rental__frame-24">
+              <div class="bb-rental__frame-13">
+                <div class="bb-rental__logo">
+                  <img src="logo0.svg" alt="BB-Rental Logo" />
+                  <span class="bb-rental__logo2">BB-Rental agency</span>
+                </div>
+                <span class="bb-rental__logo3">Rides for the daily achievers</span>
+              </div>
+            </div>
+            <div class="bb-rental__frame-23">
+              <div class="bb-rental__frame-15">
+                <span class="bb-rental__company">Company</span>
+                <div class="bb-rental__frame-14">
+                  <span class="bb-rental__about-us">About Us</span>
+                  <span class="bb-rental__careers">Careers</span>
+                  <span class="bb-rental__support">Support</span>
+                  <span class="bb-rental__terms-and-conditions">Terms and Conditions</span>
+                </div>
+              </div>
+              <div class="bb-rental__frame-17">
+                <span class="bb-rental__features">Features</span>
+                <div class="bb-rental__frame-16">
+                  <span class="bb-rental__vehicle-tracker">Vehicle Tracker</span>
+                  <span class="bb-rental__i-os-android-apps">iOS &amp; Android Apps</span>
+                  <span class="bb-rental__all-cars">All cars</span>
+                  <span class="bb-rental__locations">Locations</span>
+                </div>
+              </div>
+              <div class="bb-rental__frame-19">
+                <span class="bb-rental__contact-us">Contact Us</span>
+                <div class="bb-rental__frame-18">
+                  <span class="bb-rental__info-bb-rental-com">info@bb-rental.com</span>
+                  <span class="bb-rental___302-555-0107">(302) 555-0107</span>
+                  <span class="bb-rental___2972-westheimer-rd-santa-ana-illinois-85486">
+                    2972 Westheimer Rd. Santa Ana, Illinois 85486
+                  </span>
+                </div>
+              </div>
+              <div class="bb-rental__frame-22">
+                <div class="bb-rental__frame-20">
+                  <span class="bb-rental__get-deals-and-discounts">Get deals and discounts</span>
+                  <span class="bb-rental__subscribe-to-our-newsletter">
+                    Subscribe to our newsletter
+                  </span>
+                </div>
+                <div class="bb-rental__frame-21">
+                  <span class="bb-rental__email">Email</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bb-rental__bb-rental-copyright-team-inc">
+            © BB-rental Copyright Team Inc.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
