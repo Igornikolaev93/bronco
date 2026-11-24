@@ -173,7 +173,7 @@ ul, ol {
 }
 
 .bronco {
-  background-image: url(../image/presentation.jpg);
+  background-image: url(./image/presentation.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
