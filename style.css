@@ -95,7 +95,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(/image/2door.jpg);
+  background-image: url(./image/2door.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -173,7 +173,7 @@ ul, ol {
 }
 
 .bronco {
-  background-image: url(/image/presentation.jpg);
+  background-image: url(./image/presentation.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -290,19 +290,19 @@ ul, ol {
 }
 
 .one {
-  background-image: url(image/raprtor.jpg);
+  background-image: url(./image/raprtor.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .two {
-  background-image: url(image/dr1.jpg);
+  background-image: url(./image/dr1.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .three {
-  background-image: url(image/2door.jpg);
+  background-image: url(./image/2door.jpg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -311,7 +311,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-image: url(/image/images.jpg);
+  background-image: url(./image/images.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
