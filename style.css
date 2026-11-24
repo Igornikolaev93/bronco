@@ -95,7 +95,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(../image/2door.jpg);
+  background-image: url(./image/2door.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
